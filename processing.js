@@ -10072,7 +10072,7 @@
       declarations = extractClassesAndMethods(declarations);
       declarations = extractConstructors(declarations, name);
       var methods = [], classes = [], cstrs = [], functions = [];
-      declarations = declarations.replace(/"([DEGH])(\d+)"/g, function(all, type, index) {
+      declarations = declarations.replace(/"([DEGH])(\d+)";/g, function(all, type, index) {
         if(type === 'D') { methods.push(index); }
         else if(type === 'E') { classes.push(index); }
         else if(type === 'H') { functions.push(index); }
